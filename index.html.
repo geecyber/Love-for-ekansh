@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Love Letter for Ekansh 💙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💙 A Love Letter for Ekansh 💙</h1>
+        <p>Click the heart below for a surprise! 💙</p>
+        <button onclick="revealMessage()">💙 Click Me 💙</button>
+        <p id="message" class="hidden"></p>
+    </div>
+
+    <div class="floating-elements">
+        <div class="heart"></div>
+        <div class="star"></div>
+        <div class="heart"></div>
+        <div class="star"></div>
+        <div class="heart"></div>
+    </div>
+
+    <script>
+        let messages = [
+            "Ekansh, you are my calm in every storm. 💙",
+            "Like the endless sky, my love for you has no limits. ☁️💖",
+            "Every day with you feels like floating on soft blue waves. 🌊",
+            "You are my peace, my happiness, my home. 🏡💙",
+            "Thank you for always being by my side, my love. 🤗💖",
+            "I am so lucky to have you, my beautiful constant. 💫",
+            "With you, every moment is a dream come true. 🌌💙",
+            "You are my favorite shade of happiness. 🎨💙",
+            "I love you more than words can say, Ekansh! 💖",
+            "Let's beat police officers together once I become an APP 😉"
+        ];
+
+        let index = 0;
+
+        function revealMessage() {
+            if (index < messages.length) {
+                document.getElementById("message").innerHTML = messages[index];
+                document.getElementById("message").classList.remove("hidden");
+                index++;
+            }
+        }
+    </script>
+</body>
+</html>

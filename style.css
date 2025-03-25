@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(to bottom, #2b6cb0, #3182ce, #63b3ed); /* Shades of blue */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 10;
+    position: relative;
+}
+
+button {
+    background-color: #63b3ed;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: white;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Floating hearts and stars */
+.floating-elements div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    animation: floatUp 5s infinite ease-in-out;
+}
+
+.heart {
+    background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center/cover;
+}
+
+.star {
+    background: url('https://cdn-icons-png.flaticon.com/512/616/616489.png') no-repeat center/cover;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+.heart:nth-child(1) { left: 10%; animation-duration: 4s; }
+.star:nth-child(2) { left: 30%; animation-duration: 6s; }
+.heart:nth-child(3) { left: 50%; animation-duration: 5s; }
+.star:nth-child(4) { left: 70%; animation-duration: 7s; }
+.heart:nth-child(5) { left: 90%; animation-duration: 6s; }
